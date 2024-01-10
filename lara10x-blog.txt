@@ -4,3 +4,17 @@ https://laravel.com/docs/10.x
 vagrant@homestead:~/code/laravel$ composer create-project laravel/laravel lara10x-blog
 
 
+$ composer require laravel/breeze --dev
+apabila terjadi error 
+$ sudo apt install php8.2-curl
+
+$ php artisan breeze:install
+
+cek koneksi ke database 
+
+$ mysql -u homestead -p -h 192.168.56.56 -P 3306
+
+
+$ php artisan migrate
+npm install
+npm run dev
