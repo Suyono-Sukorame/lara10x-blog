@@ -1,0 +1,6 @@
+lara10x-blog
+
+https://laravel.com/docs/10.x
+vagrant@homestead:~/code/laravel$ composer create-project laravel/laravel lara10x-blog
+
+
