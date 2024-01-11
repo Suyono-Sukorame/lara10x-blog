@@ -37,4 +37,35 @@ https://laravel.com/docs/10.x/blade#building-layouts
 $ php artisan make:component AppWebLayout
 
 https://getbootstrap.com/docs/5.3/components/navbar/
+-----
+
+https://laravel.com/docs/10.x/blade#components
+
+$ php artisan make:component AlertMessage
+
+https://laravel.com/docs/10.x/blade#component-attributes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
