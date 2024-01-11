@@ -6,7 +6,7 @@
         Custom Title
     </x-slot>
 
-    <div class="py-5">
+    <div class="py-5 text-center">
         <div class="container">
 
             @php 
@@ -25,7 +25,7 @@
             <x-form.label value="My First Name" />
 
             <x-form.label>
-               My Slot first name
+                Laravel Migration Tutorial with example - All about migrations in Laravel 10
             </x-form.label>    
 
         </div>

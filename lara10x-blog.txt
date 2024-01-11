@@ -45,6 +45,26 @@ $ php artisan make:component AlertMessage
 
 https://laravel.com/docs/10.x/blade#component-attributes
 
+https://laravel.com/docs/10.x/blade#slots
+
+-----
+
+$ php artisan make:migration create_products_table
+$ php artisan migrate
+
+https://laravel.com/docs/10.x/migrations#creating-columns
+
+$ php artisan make:migration add_is_active_to_products_table --table=products
+$ php artisan migrate
+
+$ php artisan make:migration add_details_to_products_table
+$ php artisan migrate
+
+$ php artisan migrate:rollback --step=3
+$ php artisan migrate
+
+$ php artisan migrate:reset
+$ php artisan migrate
 
 
 
