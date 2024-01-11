@@ -7,6 +7,8 @@ $ php artisan serve
 
 $ composer require laravel/breeze --dev
 apabila terjadi error 
+$ php artisan breeze:install
+
 $ sudo apt install php8.2-curl
 $ sudo apt-get install php8.2-mbstring php8.2-mysql
 $ sudo apt-get install php8.2-fpm
@@ -19,15 +21,20 @@ hilangkan ;
 $ sudo systemctl list-units | grep php
 $ sudo systemctl restart php8.2-fpm
 
-
-
-$ php artisan breeze:install
+$ vagrant reload
 
 cek koneksi ke database 
 
 $ mysql -u homestead -p -h 192.168.56.56 -P 3306
 
-
 $ php artisan migrate
-npm install
-npm run dev
+$ npm install
+$ npm run dev
+
+-----
+https://laravel.com/docs/10.x/blade#building-layouts
+
+$ php artisan make:component AppWebLayout
+
+https://getbootstrap.com/docs/5.3/components/navbar/
+
