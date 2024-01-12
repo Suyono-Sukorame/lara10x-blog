@@ -82,9 +82,18 @@ Laravel Form Handling and Validation Tutorial with example - All about Form Vali
 
 https://www.youtube.com/watch?v=TvK1JgwSVhA&t=778s
 
+$ php artisan make:controller ProductController
+
+$ php artisan make:request ProductFormRequest
+
+----
+
+Laravel Tutorial - 9 Different ways to store data into database using Eloquent Model in Laravel 10
+
+https://www.youtube.com/watch?v=FahSdy65HV8&t=52s
 
 
-
+Sampai di menit 07:22
 
 
 
