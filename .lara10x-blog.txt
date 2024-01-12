@@ -1,0 +1,105 @@
+lara10x-blog
+
+https://laravel.com/docs/10.x
+vagrant@homestead:~/code/laravel$ composer create-project laravel/laravel lara10x-blog
+
+$ php artisan serve
+
+$ composer require laravel/breeze --dev
+apabila terjadi error 
+$ php artisan breeze:install
+
+$ sudo apt install php8.2-curl
+$ sudo apt-get install php8.2-mbstring php8.2-mysql
+$ sudo apt-get install php8.2-fpm
+$ sudo nano etc/php/8.2/cli/php.ini
+$ sudo nano etc/php/8.2/fpm/php.ini
+edit
+extension=mbstring
+extension=pdo_mysql
+hilangkan ;
+$ sudo systemctl list-units | grep php
+$ sudo systemctl restart php8.2-fpm
+
+$ vagrant reload
+
+cek koneksi ke database 
+
+$ mysql -u homestead -p -h 192.168.56.56 -P 3306
+
+$ php artisan migrate
+$ npm install
+$ npm run dev
+
+-----
+https://laravel.com/docs/10.x/blade#building-layouts
+
+$ php artisan make:component AppWebLayout
+
+https://getbootstrap.com/docs/5.3/components/navbar/
+-----
+
+https://laravel.com/docs/10.x/blade#components
+
+$ php artisan make:component AlertMessage
+
+https://laravel.com/docs/10.x/blade#component-attributes
+
+https://laravel.com/docs/10.x/blade#slots
+
+-----
+
+$ php artisan make:migration create_products_table
+$ php artisan migrate
+
+https://laravel.com/docs/10.x/migrations#creating-columns
+
+$ php artisan make:migration add_is_active_to_products_table --table=products
+$ php artisan migrate
+
+$ php artisan make:migration add_details_to_products_table
+$ php artisan migrate
+
+$ php artisan migrate:rollback --step=3
+$ php artisan migrate
+
+$ php artisan migrate:reset
+$ php artisan migrate
+
+$ php artisan migrate:refresh
+
+-----
+
+$ php artisan make:model Product
+
+$ php artisan make:migration add_slug_to_products_table --table=products
+
+$ php artisan migrate
+
+----
+
+Laravel Form Handling and Validation Tutorial with example - All about Form Validation in Laravel 10
+
+https://www.youtube.com/watch?v=TvK1JgwSVhA&t=778s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
