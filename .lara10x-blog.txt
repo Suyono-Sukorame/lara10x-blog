@@ -93,11 +93,21 @@ Laravel Tutorial - 9 Different ways to store data into database using Eloquent M
 https://www.youtube.com/watch?v=FahSdy65HV8&t=52s
 
 
-Sampai di menit 07:22
+----
 
+Laravel 10 - CRUD Operation Tutorial for beginners step by step | Complete Laravel 10 CRUD
 
+https://www.youtube.com/watch?v=w6vMy1dSF-M&t=15s
 
+$ php artisan make:migration create_categories_table
 
+$ php artisan migrate
+
+$ php artisan make:model Category
+
+$ php artisan make:controller CategoryController
+
+sampai 12:38
 
 
 

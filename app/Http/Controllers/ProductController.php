@@ -67,10 +67,10 @@ class ProductController extends Controller
         //     ]
         // );
 
-        // $product = new Product();
-        // $product->fill($request->all());
-        // $product->is_active = $request->is_active == true ? 1 : 0;
-        // $product->save();
+        $product = new Product();
+        $product->fill($request->all());
+        $product->is_active = $request->is_active == true ? 1 : 0;
+        $product->save();
 
 
         return redirect('/products/create')->with('status', 'Product Added');
