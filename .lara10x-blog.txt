@@ -107,7 +107,11 @@ $ php artisan make:model Category
 
 $ php artisan make:controller CategoryController
 
-sampai 12:38
+-----
+Laravel 10 - File / Image Upload with Example | Complete File Upload Tutorial in Laravel 10
+
+https://www.youtube.com/watch?v=C5vkWutvP0g&t=10s
+
 
 
 
