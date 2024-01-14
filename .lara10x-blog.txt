@@ -149,9 +149,16 @@ https://www.fundaofwebit.com/post/drag-and-drop-image-file-upload-in-laravel
 
 $ npm install dropzone
 
+-----
+Laravel 10 - Generate PDF using DomPDF in Laravel step by step | Laravel pdf generator tutorial
+
+https://www.youtube.com/watch?v=919OCLKM-jU&t=65s
+
+https://github.com/barryvdh/laravel-dompdf
 
 
 
+laravel-dompdf github
 
 
 

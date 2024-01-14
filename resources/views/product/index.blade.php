@@ -46,12 +46,18 @@
                                 <td>
                                     
                                     <a href="{{ url('products/'.$item->id.'/edit') }}" class="btn btn-success mx-2">Edit</a>
-                                    <a 
+                                    <form action="{{ url('products/'.$item->id.'/delete') }}" method="POST" style="display:inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger mx-1" onclick="return confirm('Are you sure ?')">Delete</button>
+                                    </form>
+                                    
+                                    {{-- <a 
                                         href="{{ url('products/'.$item->id.'/delete') }}" class="btn btn-danger mx-1"
                                         onclick="return confirm('Are you sure ?')"    
                                         >
                                         Delete
-                                    </a>
+                                    </a> --}}
                                 </td>                                    
                             </tr>
                             @endforeach
