@@ -121,21 +121,33 @@ Laravel 10 Multiple Image Upload with Example | Complete CRUD Multiple File Uplo
 
 https://www.youtube.com/watch?v=9D7BxfgeDo8&t=21s
 
+$ php artisan make:migration create_product_images_table
 
+$ php artisan migrate
 
+$ php artisan make:model ProductImage
 
+php artisan make:controller ProductController
 
+-----
 
+Laravel 10 Multiple Image upload by Drag and drop using Dropzone in Laravel from Scratch Dropzone
 
+https://www.youtube.com/watch?v=DnqYe9R7LQw
 
+$ php artisan make:migration create_galleries_table
 
+$ php artisan migrate
 
+$ php artisan make:model Gallery
 
+$ php artisan make:controller GalleryController
 
+https://docs.dropzone.dev/getting-started/installation
 
+https://www.fundaofwebit.com/post/drag-and-drop-image-file-upload-in-laravel
 
-
-
+$ npm install dropzone
 
 
 
