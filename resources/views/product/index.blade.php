@@ -1,7 +1,7 @@
 <x-app-web-layout>
 
     <x-slot name="title">
-        Categories
+        Products
     </x-slot>
 
 <div class="container mt-5">
@@ -9,8 +9,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Category
-                        <a href="{{ url('categories/create') }}" class="btn btn-primary float-end">Add Category</a>
+                    <h4>Product
+                        <a href="{{ url('products/create') }}" class="btn btn-primary float-end">Add Product</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -26,7 +26,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ( $categories as $item )
+                            @foreach ( $products as $item )
                             <tr>
                                 <td>{{ $item->id }}</td>
                                 <td>{{ $item->name }}</td>
@@ -45,9 +45,9 @@
                                     @endif
                                 <td>
                                     
-                                    <a href="{{ url('categories/'.$item->id.'/edit') }}" class="btn btn-success mx-2">Edit</a>
+                                    <a href="{{ url('products/'.$item->id.'/edit') }}" class="btn btn-success mx-2">Edit</a>
                                     <a 
-                                        href="{{ url('categories/'.$item->id.'/delete') }}" class="btn btn-danger mx-1"
+                                        href="{{ url('products/'.$item->id.'/delete') }}" class="btn btn-danger mx-1"
                                         onclick="return confirm('Are you sure ?')"    
                                         >
                                         Delete

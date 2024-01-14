@@ -9,70 +9,51 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    public function create()
+
+    public function index()
     {
-        return view('frontend.products-create');
+        $products = Product::get();
+        return view('product.index', compact('products'));
     }
 
+    public function create()
+    {
+        return view('product.create');
+    }
+
+    // public function store(Request $request)
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $request->validate([
             'name' => 'required|min:3|max:255|string',
             'description' => 'required|string',
             'price' => 'required|numeric',
             'stock' => 'required|numeric',
+            'image' => 'nullable|mimes:png,jpg,jpeg,webp',
             'is_active' => 'sometimes',
         ]);
 
-        if ($validator->fails()) {
-            return redirect('/products/create')
-                        ->withErrors($validator)
-                        ->withInput();
+        $path = ''; // Inisialisasi variabel $path
+
+        if ($request->has('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+
+            $filename = time() . '.' . $extension;
+
+            $path = 'uploads/products/';
+            $file->move($path, $filename);
         }
 
-        // $product = new Product();
-        // $product->name = $request->name;
-        // $product->description = $request->description;
-        // $product->price = $request->price;
-        // $product->stock = $request->stock;
-        // $product->is_active = $request->is_active == true ? 1 : 0;
-        // $product->save();
+        Product::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'price' => $request->price,
+            'stock' => $request->stock,
+            'image' => $path . $filename,
+            'is_active' => $request->is_active == true ? 1 : 0,
+        ]);
 
-        // Product::create([
-        //     'name' => $request->name,
-        //     'description' => $request->description,
-        //     'price' => $request->price,
-        //     'stock' => $request->stock,
-        //     'is_active' => $request->is_active == true ? 1 : 0,
-        // ]);
-        
-        // Product::create($request->all());
-
-        // $product = new Product([
-        //     'name' => $request->name,
-        //     'description' => $request->description,
-        //     'price' => $request->price,
-        //     'stock' => $request->stock,
-        //     'is_active' => $request->is_active == true ? 1 : 0,
-        // ]);
-        // $product->save();
-
-        // Product::firstOrCreate(
-        //     ['name' => $request->name],
-        //     [
-        //         'description' => $request->description,
-        //         'price' => $request->price,
-        //         'stock' => $request->stock,
-        //         'is_active' => $request->is_active == true ? 1 : 0,
-        //     ]
-        // );
-
-        $product = new Product();
-        $product->fill($request->all());
-        $product->is_active = $request->is_active == true ? 1 : 0;
-        $product->save();
-
-
-        return redirect('/products/create')->with('status', 'Product Added');
+        return redirect('products/create')->with('status', 'Product Added');
     }
 }

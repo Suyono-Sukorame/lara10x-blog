@@ -112,6 +112,52 @@ Laravel 10 - File / Image Upload with Example | Complete File Upload Tutorial in
 
 https://www.youtube.com/watch?v=C5vkWutvP0g&t=10s
 
+$ php artisan make:migration add_image_to_categories_table
+
+$ php artisan migrate
+
+-----
+Laravel 10 Multiple Image Upload with Example | Complete CRUD Multiple File Upload Tutorial Laravel
+
+https://www.youtube.com/watch?v=9D7BxfgeDo8&t=21s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
