@@ -1,3 +1,5 @@
+<x-app-web-layout>
+
 @extends('layouts.app-front')
 
 @section('content')
@@ -33,34 +35,6 @@
 
     @section('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
-    {{-- <script>
-        Dropzone.options.myDropzone = {
-            paramName: "file",
-            maxFilesize: 12, // MB
-            maxFiles: 2,
-            resizeQuality: 1.0,
-            acceptedFiles: ".jpeg,.jpg,.png,.webp",
-            addRemoveLinks: false,
-            timeout: 60000,
-            dictDefaultMessage: "Drop your files here or click to upload",
-            dictFallbackMessage: "Your browser doesn't support drag and drop file uploads.",
-            dictFileTooBig: "File is too big. Max filesize: 12MB.",
-            dictInvalidFileType: "Invalid file type. Only JPG, JPEG, PNG and GIF files are allowed.",
-            dictMaxFilesExceeded: "You can only upload up to 2 files.",
-            maxfilesexceeded: function (file) {
-                this.removeFile(file);
-            },
-            sending: function (file, xhr, formData) {
-                $('#message').text('Image Uploading...');
-            },
-            success: function (file, response) {
-                $('#message').text(response.message);
-            },
-            error: function (file, response) {
-                $('#message').text('Something Went Wrong! ' + response);
-            },
-        };
-    </script> --}}
 
     <script type="text/javascript">
 
@@ -102,6 +76,6 @@
         };
     </script>
 
-
-
     @endsection
+
+</x-app-web-layout>

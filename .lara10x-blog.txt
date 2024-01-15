@@ -156,10 +156,17 @@ https://www.youtube.com/watch?v=919OCLKM-jU&t=65s
 
 https://github.com/barryvdh/laravel-dompdf
 
+$ composer require barryvdh/laravel-dompdf
 
+$ php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"
 
-laravel-dompdf github
+$ php artisan make:controller PdfController
 
+-----
+
+How to create custom 404 error page in Laravel | How to design 404 error page in Laravel 10
+
+https://www.youtube.com/watch?v=HSzCgnTMzgU&t=17s
 
 
 

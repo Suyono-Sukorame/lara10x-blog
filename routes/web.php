@@ -31,6 +31,7 @@ Route::get('products/{productId}/upload', [App\Http\Controllers\ProductImageCont
 Route::post('products/{productId}/upload', [App\Http\Controllers\ProductImageController::class, 'store']);
 Route::get('product-image/{productImageId}/delete', [App\Http\Controllers\ProductImageController::class, 'destroy']);
 
+
 Route::get('/', function () {
     return view('frontend.index');
 });

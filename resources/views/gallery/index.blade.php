@@ -1,3 +1,6 @@
+<x-app-web-layout>
+
+
 @extends('layouts.app-front')
 
 @section('content')
@@ -42,3 +45,5 @@
     </div>
     
 @endsection
+
+</x-app-web-layout>
